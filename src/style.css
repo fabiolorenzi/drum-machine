@@ -15,6 +15,7 @@ body {
 
 .mainContainer {
     display: flex;
+    flex-wrap: wrap;
     width: 800px;
     height: 350px;
     margin: 50px auto;
@@ -28,6 +29,7 @@ body {
     flex-wrap: nowrap;
     width: 100%;
     height: 20%;
+    border-bottom: 1px solid #000000;
 }
 
 .title h1 {
@@ -41,4 +43,27 @@ body {
     display: block;
     font-size: 15px;
     margin-top: 2em;
+}
+
+.playerSection {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 20%;
+    height: 80%;
+    border-right: 1px solid #000000;
+}
+
+.playerSection label {
+    display: block;
+    margin-top: 45px;
+    margin-left: 5px;
+}
+
+#bpmSel {
+    display: block;
+    height: 20px;
+    margin: 40px auto;
+    background-color: #3d3d3d;
+    color: #f0d800;
+    border: 2px solid #000000;
 }
