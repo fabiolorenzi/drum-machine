@@ -46,8 +46,6 @@ body {
 }
 
 .playerSection {
-    display: flex;
-    flex-wrap: nowrap;
     width: 20%;
     height: 80%;
     border-right: 1px solid #000000;
@@ -77,14 +75,52 @@ body {
     display: block;
     height: 20px;
     font-size: 15px;
-    margin-top: 70px;
-    margin-left: -73px;
     color: #000000;
     background-color: #807f7f;
     border: 2px solid #000000;
     border-radius: 3px;
+    position: relative;
+    top: -35px;
+    left: 77px;
 }
 
 #tripletActive {
     color: #ff0000;
+}
+
+.playLine {
+    display: flex;
+    width: 100%;
+    position: relative;
+    top: 80px;
+}
+
+.playStopButton {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: auto;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    color: #000000;
+    background-color: #807f7f;
+}
+
+.playButton {
+    font-size: 30px;
+}
+
+#playButtonActive,
+.stopButton:active {
+    color: #ff0000;
+}
+
+#playWritten,
+#stopWritten {
+    display: block;
+    margin: auto;
+}
+
+.stopButton {
+    font-size: 20px;
+    padding: 10px 15px;
 }

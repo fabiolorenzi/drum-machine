@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { AiFillCaretRight } from "react-icons/ai";
+import { BsSliders } from "react-icons/bs";
 
 function MainContainer() {
 
@@ -59,7 +61,25 @@ function MainContainer() {
                     />
                 </div>
                 <div className="secondLine">
-                    <button className="tripletButton" id={settings.triplet ? "tripletActive" : ""} onClick={tripletSetter}>3</button> 
+                    <button
+                        className="tripletButton"
+                        id={settings.triplet ? "tripletActive" : ""}
+                        onClick={tripletSetter}>
+                            3
+                    </button>
+                </div>
+                <div className="playLine">
+                    <button
+                        className="playStopButton playButton"
+                        id={settings.playing ? "playButtonActive" : ""}
+                        onClick={starter}>
+                            <AiFillCaretRight id="playWritten" />
+                    </button>
+                    <button
+                        className="playStopButton stopButton"
+                        onClick={stopper}>
+                            <BsSliders id="stopWritten" />
+                    </button>
                 </div>
             </div>
         </div>
