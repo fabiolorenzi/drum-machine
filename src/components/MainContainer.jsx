@@ -82,6 +82,8 @@ function MainContainer() {
                     </button>
                 </div>
             </div>
+            <div className="sampleSection"></div>
+            <div className="sequencerSection"></div>
         </div>
     );
 };

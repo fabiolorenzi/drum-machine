@@ -124,3 +124,23 @@ body {
     font-size: 20px;
     padding: 10px 15px;
 }
+
+.sampleSection {
+    display: block;
+    width: 80%;
+    height: 60%;
+    position: relative;
+    left: 20%;
+    bottom: 80%;
+}
+
+.sequencerSection {
+    display: block;
+    width: 80.1%;
+    height: 20%;
+    position: relative;
+    left: 20%;
+    bottom: 80%;
+    background-color: #000000;
+    border-bottom-right-radius: 10px;
+}
