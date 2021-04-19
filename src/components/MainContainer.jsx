@@ -363,6 +363,134 @@ function MainContainer() {
                     <div className={snare.spy ? "selectorOn" : "selectorOff"}></div>
                     <button className="selectButton" onClick={e => sampleSelector(e, "snare")}>Sel</button>
                 </div>
+                <div className="singleSample" id="clapSection">
+                    <h1>Clap</h1>
+                    <label htmlFor="clap.volume">Vol</label>
+                    <input
+                        type="number"
+                        name="clap.volume"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        value={clap.volume}
+                        onChange={handleVolume}
+                    />
+                    <button className="listenButton" onClick={e => playSample(e, "clap")}><AiFillSound className="listenIcon" /></button>
+                    <div className={clap.spy ? "selectorOn" : "selectorOff"}></div>
+                    <button className="selectButton" onClick={e => sampleSelector(e, "clap")}>Sel</button>
+                </div>
+                <div className="singleSample" id="ClosedHatSection">
+                    <h1>C Hat</h1>
+                    <label htmlFor="clap.volume">Vol</label>
+                    <input
+                        type="number"
+                        name="closedHat.volume"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        value={closedHat.volume}
+                        onChange={handleVolume}
+                    />
+                    <button className="listenButton" onClick={e => playSample(e, "closedHat")}><AiFillSound className="listenIcon" /></button>
+                    <div className={closedHat.spy ? "selectorOn" : "selectorOff"}></div>
+                    <button className="selectButton" onClick={e => sampleSelector(e, "closedHat")}>Sel</button>
+                </div>
+                <div className="singleSample" id="openHatSection">
+                    <h1>O Hat</h1>
+                    <label htmlFor="openHat.volume">Vol</label>
+                    <input
+                        type="number"
+                        name="openHat.volume"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        value={openHat.volume}
+                        onChange={handleVolume}
+                    />
+                    <button className="listenButton" onClick={e => playSample(e, "openHat")}><AiFillSound className="listenIcon" /></button>
+                    <div className={openHat.spy ? "selectorOn" : "selectorOff"}></div>
+                    <button className="selectButton" onClick={e => sampleSelector(e, "openHat")}>Sel</button>
+                </div>
+                <div className="singleSample" id="crashSection">
+                    <h1>Crash</h1>
+                    <label htmlFor="crash.volume">Vol</label>
+                    <input
+                        type="number"
+                        name="crash.volume"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        value={crash.volume}
+                        onChange={handleVolume}
+                    />
+                    <button className="listenButton" onClick={e => playSample(e, "crash")}><AiFillSound className="listenIcon" /></button>
+                    <div className={crash.spy ? "selectorOn" : "selectorOff"}></div>
+                    <button className="selectButton" onClick={e => sampleSelector(e, "crash")}>Sel</button>
+                </div>
+                <div className="singleSample" id="rideSection">
+                    <h1>Ride</h1>
+                    <label htmlFor="ride.volume">Vol</label>
+                    <input
+                        type="number"
+                        name="ride.volume"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        value={ride.volume}
+                        onChange={handleVolume}
+                    />
+                    <button className="listenButton" onClick={e => playSample(e, "ride")}><AiFillSound className="listenIcon" /></button>
+                    <div className={ride.spy ? "selectorOn" : "selectorOff"}></div>
+                    <button className="selectButton" onClick={e => sampleSelector(e, "ride")}>Sel</button>
+                </div>
+                <div className="singleSample" id="percussion1Section">
+                    <h1>Perc 1</h1>
+                    <label htmlFor="percussion_1.volume">Vol</label>
+                    <input
+                        type="number"
+                        name="percussion_1.volume"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        value={percussion_1.volume}
+                        onChange={handleVolume}
+                    />
+                    <button className="listenButton" onClick={e => playSample(e, "percussion_1")}><AiFillSound className="listenIcon" /></button>
+                    <div className={percussion_1.spy ? "selectorOn" : "selectorOff"}></div>
+                    <button className="selectButton" onClick={e => sampleSelector(e, "percussion_1")}>Sel</button>
+                </div>
+                <div className="singleSample" id="percussion2Section">
+                    <h1>Perc 2</h1>
+                    <label htmlFor="percussion_2.volume">Vol</label>
+                    <input
+                        type="number"
+                        name="percussion_2.volume"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        value={percussion_2.volume}
+                        onChange={handleVolume}
+                    />
+                    <button className="listenButton" onClick={e => playSample(e, "percussion_2")}><AiFillSound className="listenIcon" /></button>
+                    <div className={percussion_2.spy ? "selectorOn" : "selectorOff"}></div>
+                    <button className="selectButton" onClick={e => sampleSelector(e, "percussion_2")}>Sel</button>
+                </div>
+                <div className="singleSample" id="tomSection">
+                    <h1>Tom</h1>
+                    <label htmlFor="tom.volume">Vol</label>
+                    <input
+                        type="number"
+                        name="tom.volume"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        value={tom.volume}
+                        onChange={handleVolume}
+                    />
+                    <button className="listenButton" onClick={e => playSample(e, "tom")}><AiFillSound className="listenIcon" /></button>
+                    <div className={tom.spy ? "selectorOn" : "selectorOff"}></div>
+                    <button className="selectButton" onClick={e => sampleSelector(e, "tom")}>Sel</button>
+                </div>
             </div>
             <div className="sequencerSection"></div>
         </div>

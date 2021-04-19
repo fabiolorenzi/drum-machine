@@ -137,7 +137,7 @@ body {
 
 .singleSample {
     display: block;
-    width: 10%;
+    width: 9.8%;
     height: 100%;
     border-right: 1px solid #000000;
     text-align: center;
@@ -198,6 +198,10 @@ body {
     color: #000000;
     border: 2px solid #000000;
     border-radius: 4px;
+}
+
+#tomSection {
+    border-right: none;
 }
 
 .sequencerSection {
