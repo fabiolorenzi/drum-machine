@@ -92,7 +92,7 @@ body {
     display: flex;
     width: 100%;
     position: relative;
-    top: 80px;
+    top: 95px;
 }
 
 .playStopButton {
@@ -126,7 +126,8 @@ body {
 }
 
 .sampleSection {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     width: 80%;
     height: 60%;
     position: relative;
@@ -134,8 +135,74 @@ body {
     bottom: 80%;
 }
 
-.sequencerSection {
+.singleSample {
     display: block;
+    width: 10%;
+    height: 100%;
+    border-right: 1px solid #000000;
+    text-align: center;
+}
+
+.singleSample h1 {
+    display: block;
+    font-size: 12px;
+}
+
+.singleSample label {
+    font-size: 10px;
+}
+
+.singleSample input {
+    font-size: 10px;
+    color: #ffa600;
+    background-color: #000000;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.listenIcon {
+    display: block;
+    margin: auto;
+}
+
+.listenButton {
+    margin-top: 20px;
+    background-color: #807f7f;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 4px;
+}
+
+.selectorOff {
+    display: block;
+    margin: 20px auto;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    background-color: #4e0000;
+}
+
+.selectorOn {
+    display: block;
+    margin: 20px auto;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    background-color: #ff0000;
+}
+
+.selectButton {
+    background-color: #807f7f;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 4px;
+}
+
+.sequencerSection {
+    display: flex;
+    flex-wrap: wrap;
     width: 80.1%;
     height: 20%;
     position: relative;
