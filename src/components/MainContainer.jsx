@@ -86,6 +86,26 @@ function MainContainer() {
         spy: false
     });
 
+    const [mainPattern, setMainPattern] = useState({
+        length: 16,
+        part01: true,
+        part02: true,
+        part03: true,
+        part04: true,
+        part05: true,
+        part06: true,
+        part07: true,
+        part08: true,
+        part09: true,
+        part10: true,
+        part11: true,
+        part12: true,
+        part13: true,
+        part14: true,
+        part15: true,
+        part16: true
+    });
+
     //--------------------FUNCTIONS--------------------
 
     const handleBpmChange = e => {
@@ -109,6 +129,7 @@ function MainContainer() {
             setSettings({...settings, triplet: false, mills: 20000 / settings.bpm});
         } else {
             setSettings({...settings, triplet: true, mills: 15000 / settings.bpm});
+            setMainPattern({...mainPattern, length: 12});
         };
     };
 
@@ -287,6 +308,40 @@ function MainContainer() {
         };
     };
 
+    const handlePatternLength = e => {
+        e.preventDefault();
+        var lengthValue = e.target.value;
+        let listPat = [];
+        for (let i = 1; i <= 16; i++) {
+            if (i <= lengthValue) {
+                let val = true;
+                listPat.push(val);
+            } else {
+                let val = false;
+                listPat.push(val);
+            };
+        };
+        setMainPattern({
+            length: lengthValue,
+            part01: listPat[0],
+            part02: listPat[1],
+            part03: listPat[2],
+            part04: listPat[3],
+            part05: listPat[4],
+            part06: listPat[5],
+            part07: listPat[6],
+            part08: listPat[7],
+            part09: listPat[8],
+            part10: listPat[9],
+            part11: listPat[10],
+            part12: listPat[11],
+            part13: listPat[12],
+            part14: listPat[13],
+            part15: listPat[14],
+            part16: listPat[15]
+        })
+    };
+
     //--------------------RETURN--------------------
 
     return(
@@ -315,6 +370,18 @@ function MainContainer() {
                         onClick={tripletSetter}>
                             3
                     </button>
+                </div>
+                <div className="thirdLine">
+                    <label htmlFor="length">PAT</label>
+                    <input
+                        type="number"
+                        id="lengthSel"
+                        name="mainPattern"
+                        min="1"
+                        max={settings.triplet === false ? "16" : "12"}
+                        value={mainPattern.length}
+                        onChange={handlePatternLength}
+                    />
                 </div>
                 <div className="playLine">
                     <button
@@ -494,112 +561,112 @@ function MainContainer() {
             </div>
             <div className="sequencerSection">
                 <div className="singleButtonFirst">
-                    <div className="firstLineSpyOff"></div>
+                    <div className={mainPattern.part01 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className="secondLineSpyOff"></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
-                    <div className="firstLineSpyOff"></div>
+                    <div className={mainPattern.part02 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className="secondLineSpyOff"></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
-                    <div className="firstLineSpyOff"></div>
+                    <div className={mainPattern.part03 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className="secondLineSpyOff"></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
-                    <div className="firstLineSpyOff"></div>
+                    <div className={mainPattern.part04 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className="secondLineSpyOff"></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
-                    <div className="firstLineSpyOff"></div>
+                    <div className={mainPattern.part05 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className="secondLineSpyOff"></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
-                    <div className="firstLineSpyOff"></div>
+                    <div className={mainPattern.part06 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className="secondLineSpyOff"></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
-                    <div className="firstLineSpyOff"></div>
+                    <div className={mainPattern.part07 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className="secondLineSpyOff"></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
-                    <div className="firstLineSpyOff"></div>
+                    <div className={mainPattern.part08 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className="secondLineSpyOff"></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
-                    <div className="firstLineSpyOff"></div>
+                    <div className={mainPattern.part09 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className="secondLineSpyOff"></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
-                    <div className="firstLineSpyOff"></div>
+                    <div className={mainPattern.part10 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className="secondLineSpyOff"></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
-                    <div className="firstLineSpyOff"></div>
+                    <div className={mainPattern.part11 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className="secondLineSpyOff"></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
-                    <div className="firstLineSpyOff"></div>
+                    <div className={mainPattern.part12 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className="secondLineSpyOff"></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
-                    <div className="firstLineSpyOff"></div>
+                    <div className={mainPattern.part13 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className="secondLineSpyOff"></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
-                    <div className="firstLineSpyOff"></div>
+                    <div className={mainPattern.part14 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className="secondLineSpyOff"></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
-                    <div className="firstLineSpyOff"></div>
+                    <div className={mainPattern.part15 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className="secondLineSpyOff"></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
-                    <div className="firstLineSpyOff"></div>
+                    <div className={mainPattern.part16 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className="secondLineSpyOff"></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>

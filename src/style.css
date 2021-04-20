@@ -51,7 +51,8 @@ body {
     border-right: 1px solid #000000;
 }
 
-.bpmSection {
+.bpmSection,
+.thirdLine {
     display: flex;
 }
 
@@ -62,7 +63,8 @@ body {
     margin-right: 15px;
 }
 
-#bpmSel {
+#bpmSel,
+#lengthSel {
     display: block;
     height: 20px;
     margin: 40px auto;
@@ -86,6 +88,19 @@ body {
 
 #tripletActive {
     color: #ff0000;
+}
+
+.thirdLine {
+    margin-top: -60px;
+    margin-bottom: -45px;
+}
+
+.thirdLine label {
+    margin-right: 22px;
+}
+
+#lengthSel {
+    width: 67px;
 }
 
 .playLine {
