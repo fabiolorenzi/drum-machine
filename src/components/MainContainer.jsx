@@ -129,7 +129,25 @@ function MainContainer() {
             setSettings({...settings, triplet: false, mills: 20000 / settings.bpm});
         } else {
             setSettings({...settings, triplet: true, mills: 15000 / settings.bpm});
-            setMainPattern({...mainPattern, length: 12});
+            setMainPattern({
+                length: 12,
+                part01: true,
+                part02: true,
+                part03: true,
+                part04: true,
+                part05: true,
+                part06: true,
+                part07: true,
+                part08: true,
+                part09: true,
+                part10: true,
+                part11: true,
+                part12: true,
+                part13: false,
+                part14: false,
+                part15: false,
+                part16: false
+            });
         };
     };
 
