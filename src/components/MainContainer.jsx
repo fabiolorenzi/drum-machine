@@ -492,7 +492,120 @@ function MainContainer() {
                     <button className="selectButton" onClick={e => sampleSelector(e, "tom")}>Sel</button>
                 </div>
             </div>
-            <div className="sequencerSection"></div>
+            <div className="sequencerSection">
+                <div className="singleButtonFirst">
+                    <div className="firstLineSpyOff"></div>
+                    <div className="secondLineSpyOff"></div>
+                    <div className="sequencerButton">
+                        <div className="thirdLineSpyOff"></div>
+                    </div>
+                </div>
+                <div className="singleButtonFirst">
+                    <div className="firstLineSpyOff"></div>
+                    <div className="secondLineSpyOff"></div>
+                    <div className="sequencerButton">
+                        <div className="thirdLineSpyOff"></div>
+                    </div>
+                </div>
+                <div className="singleButtonFirst">
+                    <div className="firstLineSpyOff"></div>
+                    <div className="secondLineSpyOff"></div>
+                    <div className="sequencerButton">
+                        <div className="thirdLineSpyOff"></div>
+                    </div>
+                </div>
+                <div className="singleButtonFirst">
+                    <div className="firstLineSpyOff"></div>
+                    <div className="secondLineSpyOff"></div>
+                    <div className="sequencerButton">
+                        <div className="thirdLineSpyOff"></div>
+                    </div>
+                </div>
+                <div className="singleButtonFirst">
+                    <div className="firstLineSpyOff"></div>
+                    <div className="secondLineSpyOff"></div>
+                    <div className="sequencerButton">
+                        <div className="thirdLineSpyOff"></div>
+                    </div>
+                </div>
+                <div className="singleButtonFirst">
+                    <div className="firstLineSpyOff"></div>
+                    <div className="secondLineSpyOff"></div>
+                    <div className="sequencerButton">
+                        <div className="thirdLineSpyOff"></div>
+                    </div>
+                </div>
+                <div className="singleButtonFirst">
+                    <div className="firstLineSpyOff"></div>
+                    <div className="secondLineSpyOff"></div>
+                    <div className="sequencerButton">
+                        <div className="thirdLineSpyOff"></div>
+                    </div>
+                </div>
+                <div className="singleButtonFirst">
+                    <div className="firstLineSpyOff"></div>
+                    <div className="secondLineSpyOff"></div>
+                    <div className="sequencerButton">
+                        <div className="thirdLineSpyOff"></div>
+                    </div>
+                </div>
+                <div className="singleButtonFirst">
+                    <div className="firstLineSpyOff"></div>
+                    <div className="secondLineSpyOff"></div>
+                    <div className="sequencerButton">
+                        <div className="thirdLineSpyOff"></div>
+                    </div>
+                </div>
+                <div className="singleButtonFirst">
+                    <div className="firstLineSpyOff"></div>
+                    <div className="secondLineSpyOff"></div>
+                    <div className="sequencerButton">
+                        <div className="thirdLineSpyOff"></div>
+                    </div>
+                </div>
+                <div className="singleButtonFirst">
+                    <div className="firstLineSpyOff"></div>
+                    <div className="secondLineSpyOff"></div>
+                    <div className="sequencerButton">
+                        <div className="thirdLineSpyOff"></div>
+                    </div>
+                </div>
+                <div className="singleButtonFirst">
+                    <div className="firstLineSpyOff"></div>
+                    <div className="secondLineSpyOff"></div>
+                    <div className="sequencerButton">
+                        <div className="thirdLineSpyOff"></div>
+                    </div>
+                </div>
+                <div className="singleButtonFirst">
+                    <div className="firstLineSpyOff"></div>
+                    <div className="secondLineSpyOff"></div>
+                    <div className="sequencerButton">
+                        <div className="thirdLineSpyOff"></div>
+                    </div>
+                </div>
+                <div className="singleButtonFirst">
+                    <div className="firstLineSpyOff"></div>
+                    <div className="secondLineSpyOff"></div>
+                    <div className="sequencerButton">
+                        <div className="thirdLineSpyOff"></div>
+                    </div>
+                </div>
+                <div className="singleButtonFirst">
+                    <div className="firstLineSpyOff"></div>
+                    <div className="secondLineSpyOff"></div>
+                    <div className="sequencerButton">
+                        <div className="thirdLineSpyOff"></div>
+                    </div>
+                </div>
+                <div className="singleButtonFirst">
+                    <div className="firstLineSpyOff"></div>
+                    <div className="secondLineSpyOff"></div>
+                    <div className="sequencerButton">
+                        <div className="thirdLineSpyOff"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
