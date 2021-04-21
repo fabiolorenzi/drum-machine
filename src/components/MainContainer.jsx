@@ -106,21 +106,108 @@ function MainContainer() {
         part16: true
     });
 
+    var rhythmState = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
+
+    const [rhythmPattern, setRhythmPattern] = useState({
+        part01: rhythmState[0],
+        part02: rhythmState[1],
+        part03: rhythmState[2],
+        part04: rhythmState[3],
+        part05: rhythmState[4],
+        part06: rhythmState[5],
+        part07: rhythmState[6],
+        part08: rhythmState[7],
+        part09: rhythmState[8],
+        part10: rhythmState[9],
+        part11: rhythmState[10],
+        part12: rhythmState[11],
+        part13: rhythmState[12],
+        part14: rhythmState[13],
+        part15: rhythmState[14],
+        part16: rhythmState[15]
+    });
+
+    var player = useRef(null);
+    var counter = 0;
+
     //--------------------FUNCTIONS--------------------
 
     const handleBpmChange = e => {
         e.preventDefault();
-        setSettings({...settings, bpm: e.target.value, mills: 15000 / settings.bpm});
+        if (!settings.triplet) {
+            setSettings({...settings, bpm: e.target.value, mills: 15000 / settings.bpm});
+        } else {
+            setSettings({...settings, bpm: e.target.value, mills: 20000 / settings.bpm});
+        }
     };
 
     const starter = e => {
         e.preventDefault();
-        setSettings({...settings, playing: true});
+        if (!settings.playing) {
+            setSettings({...settings, playing: true});
+            clearInterval(player.current);
+            player.current = setInterval(
+                () => {
+                    if (counter === 0) {
+                        rhythmState[0] = true;
+                        rhythmState[mainPattern.length-1] = false;
+                        counter++;
+                    } else if (counter > 0 && counter < mainPattern.length-1) {
+                        rhythmState[counter] = true;
+                        rhythmState[counter-1] = false;
+                        counter++;
+                    } else {
+                        rhythmState[counter] = true;
+                        rhythmState[counter-1] = false;
+                        counter = 0;
+                    };
+                    setRhythmPattern({
+                        part01: rhythmState[0],
+                        part02: rhythmState[1],
+                        part03: rhythmState[2],
+                        part04: rhythmState[3],
+                        part05: rhythmState[4],
+                        part06: rhythmState[5],
+                        part07: rhythmState[6],
+                        part08: rhythmState[7],
+                        part09: rhythmState[8],
+                        part10: rhythmState[9],
+                        part11: rhythmState[10],
+                        part12: rhythmState[11],
+                        part13: rhythmState[12],
+                        part14: rhythmState[13],
+                        part15: rhythmState[14],
+                        part16: rhythmState[15]
+                    });
+                }, settings.mills
+            );
+        };
     };
 
     const stopper = e => {
         e.preventDefault();
+        clearInterval(player.current);
         setSettings({...settings, playing: false});
+        rhythmState = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
+        setRhythmPattern({
+            part01: rhythmState[0],
+            part02: rhythmState[1],
+            part03: rhythmState[2],
+            part04: rhythmState[3],
+            part05: rhythmState[4],
+            part06: rhythmState[5],
+            part07: rhythmState[6],
+            part08: rhythmState[7],
+            part09: rhythmState[8],
+            part10: rhythmState[9],
+            part11: rhythmState[10],
+            part12: rhythmState[11],
+            part13: rhythmState[12],
+            part14: rhythmState[13],
+            part15: rhythmState[14],
+            part16: rhythmState[15]
+        });
+
     };
 
     const tripletSetter = e => {
@@ -580,112 +667,112 @@ function MainContainer() {
             <div className="sequencerSection">
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part01 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
-                    <div className="secondLineSpyOff"></div>
+                    <div className={rhythmPattern.part01 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part02 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
-                    <div className="secondLineSpyOff"></div>
+                    <div className={rhythmPattern.part02 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part03 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
-                    <div className="secondLineSpyOff"></div>
+                    <div className={rhythmPattern.part03 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part04 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
-                    <div className="secondLineSpyOff"></div>
+                    <div className={rhythmPattern.part04 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part05 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
-                    <div className="secondLineSpyOff"></div>
+                    <div className={rhythmPattern.part05 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part06 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
-                    <div className="secondLineSpyOff"></div>
+                    <div className={rhythmPattern.part06 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part07 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
-                    <div className="secondLineSpyOff"></div>
+                    <div className={rhythmPattern.part07 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part08 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
-                    <div className="secondLineSpyOff"></div>
+                    <div className={rhythmPattern.part08 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part09 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
-                    <div className="secondLineSpyOff"></div>
+                    <div className={rhythmPattern.part09 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part10 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
-                    <div className="secondLineSpyOff"></div>
+                    <div className={rhythmPattern.part10 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part11 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
-                    <div className="secondLineSpyOff"></div>
+                    <div className={rhythmPattern.part11 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part12 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
-                    <div className="secondLineSpyOff"></div>
+                    <div className={rhythmPattern.part12 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part13 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
-                    <div className="secondLineSpyOff"></div>
+                    <div className={rhythmPattern.part13 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part14 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
-                    <div className="secondLineSpyOff"></div>
+                    <div className={rhythmPattern.part14 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part15 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
-                    <div className="secondLineSpyOff"></div>
+                    <div className={rhythmPattern.part15 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part16 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
-                    <div className="secondLineSpyOff"></div>
+                    <div className={rhythmPattern.part16 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
                     <div className="sequencerButton">
                         <div className="thirdLineSpyOff"></div>
                     </div>
