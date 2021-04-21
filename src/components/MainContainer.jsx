@@ -715,7 +715,7 @@ function MainContainer() {
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part01 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className={rhythmPattern.part01 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
-                    <div className="sequencerButton" onClick={e => handleSequence(e, 0)}>
+                    <div className="sequencerButton button4" onClick={e => handleSequence(e, 0)}>
                         <div className={sequenceButton.part01 ? "thirdLineSpyOn" : "thirdLineSpyOff"}></div>
                     </div>
                 </div>
@@ -736,14 +736,14 @@ function MainContainer() {
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part04 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className={rhythmPattern.part04 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
-                    <div className="sequencerButton" onClick={e => handleSequence(e, 3)}>
+                    <div className="sequencerButton button3" onClick={e => handleSequence(e, 3)}>
                         <div className={sequenceButton.part04 ? "thirdLineSpyOn" : "thirdLineSpyOff"}></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part05 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className={rhythmPattern.part05 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
-                    <div className="sequencerButton" onClick={e => handleSequence(e, 4)}>
+                    <div className="sequencerButton button4" onClick={e => handleSequence(e, 4)}>
                         <div className={sequenceButton.part05 ? "thirdLineSpyOn" : "thirdLineSpyOff"}></div>
                     </div>
                 </div>
@@ -757,7 +757,7 @@ function MainContainer() {
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part07 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className={rhythmPattern.part07 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
-                    <div className="sequencerButton" onClick={e => handleSequence(e, 6)}>
+                    <div className="sequencerButton button3" onClick={e => handleSequence(e, 6)}>
                         <div className={sequenceButton.part07 ? "thirdLineSpyOn" : "thirdLineSpyOff"}></div>
                     </div>
                 </div>
@@ -771,14 +771,14 @@ function MainContainer() {
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part09 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className={rhythmPattern.part09 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
-                    <div className="sequencerButton" onClick={e => handleSequence(e, 8)}>
+                    <div className="sequencerButton button4" onClick={e => handleSequence(e, 8)}>
                         <div className={sequenceButton.part09 ? "thirdLineSpyOn" : "thirdLineSpyOff"}></div>
                     </div>
                 </div>
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part10 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className={rhythmPattern.part10 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
-                    <div className="sequencerButton" onClick={e => handleSequence(e, 9)}>
+                    <div className="sequencerButton button3" onClick={e => handleSequence(e, 9)}>
                         <div className={sequenceButton.part10 ? "thirdLineSpyOn" : "thirdLineSpyOff"}></div>
                     </div>
                 </div>
@@ -799,7 +799,7 @@ function MainContainer() {
                 <div className="singleButtonFirst">
                     <div className={mainPattern.part13 ? "firstLineSpyOn" : "firstLineSpyOff"}></div>
                     <div className={rhythmPattern.part13 ? "secondLineSpyOn" : "secondLineSpyOff"}></div>
-                    <div className="sequencerButton" onClick={e => handleSequence(e, 12)}>
+                    <div className="sequencerButton button4" onClick={e => handleSequence(e, 12)}>
                         <div className={sequenceButton.part13 ? "thirdLineSpyOn" : "thirdLineSpyOff"}></div>
                     </div>
                 </div>
