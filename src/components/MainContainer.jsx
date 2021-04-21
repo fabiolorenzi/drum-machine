@@ -149,6 +149,189 @@ function MainContainer() {
         part16: false
     });
 
+    const [allPatterns, setAllPatterns] = useState({
+        kick: {
+            part01: false,
+            part02: false,
+            part03: false,
+            part04: false,
+            part05: false,
+            part06: false,
+            part07: false,
+            part08: false,
+            part09: false,
+            part10: false,
+            part11: false,
+            part12: false,
+            part13: false,
+            part14: false,
+            part15: false,
+            part16: false
+        },
+        snare: {
+            part01: false,
+            part02: false,
+            part03: false,
+            part04: false,
+            part05: false,
+            part06: false,
+            part07: false,
+            part08: false,
+            part09: false,
+            part10: false,
+            part11: false,
+            part12: false,
+            part13: false,
+            part14: false,
+            part15: false,
+            part16: false
+        },
+        clap: {
+            part01: false,
+            part02: false,
+            part03: false,
+            part04: false,
+            part05: false,
+            part06: false,
+            part07: false,
+            part08: false,
+            part09: false,
+            part10: false,
+            part11: false,
+            part12: false,
+            part13: false,
+            part14: false,
+            part15: false,
+            part16: false
+        },
+        closedHat: {
+            part01: false,
+            part02: false,
+            part03: false,
+            part04: false,
+            part05: false,
+            part06: false,
+            part07: false,
+            part08: false,
+            part09: false,
+            part10: false,
+            part11: false,
+            part12: false,
+            part13: false,
+            part14: false,
+            part15: false,
+            part16: false
+        },
+        openHat: {
+            part01: false,
+            part02: false,
+            part03: false,
+            part04: false,
+            part05: false,
+            part06: false,
+            part07: false,
+            part08: false,
+            part09: false,
+            part10: false,
+            part11: false,
+            part12: false,
+            part13: false,
+            part14: false,
+            part15: false,
+            part16: false
+        },
+        crash: {
+            part01: false,
+            part02: false,
+            part03: false,
+            part04: false,
+            part05: false,
+            part06: false,
+            part07: false,
+            part08: false,
+            part09: false,
+            part10: false,
+            part11: false,
+            part12: false,
+            part13: false,
+            part14: false,
+            part15: false,
+            part16: false
+        },
+        ride: {
+            part01: false,
+            part02: false,
+            part03: false,
+            part04: false,
+            part05: false,
+            part06: false,
+            part07: false,
+            part08: false,
+            part09: false,
+            part10: false,
+            part11: false,
+            part12: false,
+            part13: false,
+            part14: false,
+            part15: false,
+            part16: false
+        },
+        percussion_1: {
+            part01: false,
+            part02: false,
+            part03: false,
+            part04: false,
+            part05: false,
+            part06: false,
+            part07: false,
+            part08: false,
+            part09: false,
+            part10: false,
+            part11: false,
+            part12: false,
+            part13: false,
+            part14: false,
+            part15: false,
+            part16: false
+        },
+        percussion_2: {
+            part01: false,
+            part02: false,
+            part03: false,
+            part04: false,
+            part05: false,
+            part06: false,
+            part07: false,
+            part08: false,
+            part09: false,
+            part10: false,
+            part11: false,
+            part12: false,
+            part13: false,
+            part14: false,
+            part15: false,
+            part16: false
+        },
+        tom: {
+            part01: false,
+            part02: false,
+            part03: false,
+            part04: false,
+            part05: false,
+            part06: false,
+            part07: false,
+            part08: false,
+            part09: false,
+            part10: false,
+            part11: false,
+            part12: false,
+            part13: false,
+            part14: false,
+            part15: false,
+            part16: false
+        }
+    });
+
     //--------------------FUNCTIONS--------------------
 
     const handleBpmChange = e => {
@@ -330,6 +513,24 @@ function MainContainer() {
             setPercussion_1({...percussion_1, spy: false});
             setPercussion_2({...percussion_2, spy: false});
             setTom({...tom, spy: false});
+            setSequenceButton({
+                part01: allPatterns.kick.part01,
+                part02: allPatterns.kick.part02,
+                part03: allPatterns.kick.part03,
+                part04: allPatterns.kick.part04,
+                part05: allPatterns.kick.part05,
+                part06: allPatterns.kick.part06,
+                part07: allPatterns.kick.part07,
+                part08: allPatterns.kick.part08,
+                part09: allPatterns.kick.part09,
+                part10: allPatterns.kick.part10,
+                part11: allPatterns.kick.part11,
+                part12: allPatterns.kick.part12,
+                part13: allPatterns.kick.part13,
+                part14: allPatterns.kick.part14,
+                part15: allPatterns.kick.part15,
+                part16: allPatterns.kick.part16
+            });
         } else if (sample === "snare") {
             setKick({...kick, spy: false});
             setSnare({...snare, spy: true});
@@ -341,6 +542,24 @@ function MainContainer() {
             setPercussion_1({...percussion_1, spy: false});
             setPercussion_2({...percussion_2, spy: false});
             setTom({...tom, spy: false});
+            setSequenceButton({
+                part01: allPatterns.snare.part01,
+                part02: allPatterns.snare.part02,
+                part03: allPatterns.snare.part03,
+                part04: allPatterns.snare.part04,
+                part05: allPatterns.snare.part05,
+                part06: allPatterns.snare.part06,
+                part07: allPatterns.snare.part07,
+                part08: allPatterns.snare.part08,
+                part09: allPatterns.snare.part09,
+                part10: allPatterns.snare.part10,
+                part11: allPatterns.snare.part11,
+                part12: allPatterns.snare.part12,
+                part13: allPatterns.snare.part13,
+                part14: allPatterns.snare.part14,
+                part15: allPatterns.snare.part15,
+                part16: allPatterns.snare.part16
+            });
         } else if (sample === "clap") {
             setKick({...kick, spy: false});
             setSnare({...snare, spy: false});
@@ -352,6 +571,24 @@ function MainContainer() {
             setPercussion_1({...percussion_1, spy: false});
             setPercussion_2({...percussion_2, spy: false});
             setTom({...tom, spy: false});
+            setSequenceButton({
+                part01: allPatterns.clap.part01,
+                part02: allPatterns.clap.part02,
+                part03: allPatterns.clap.part03,
+                part04: allPatterns.clap.part04,
+                part05: allPatterns.clap.part05,
+                part06: allPatterns.clap.part06,
+                part07: allPatterns.clap.part07,
+                part08: allPatterns.clap.part08,
+                part09: allPatterns.clap.part09,
+                part10: allPatterns.clap.part10,
+                part11: allPatterns.clap.part11,
+                part12: allPatterns.clap.part12,
+                part13: allPatterns.clap.part13,
+                part14: allPatterns.clap.part14,
+                part15: allPatterns.clap.part15,
+                part16: allPatterns.clap.part16
+            });
         } else if (sample === "closedHat") {
             setKick({...kick, spy: false});
             setSnare({...snare, spy: false});
@@ -363,6 +600,24 @@ function MainContainer() {
             setPercussion_1({...percussion_1, spy: false});
             setPercussion_2({...percussion_2, spy: false});
             setTom({...tom, spy: false});
+            setSequenceButton({
+                part01: allPatterns.closedHat.part01,
+                part02: allPatterns.closedHat.part02,
+                part03: allPatterns.closedHat.part03,
+                part04: allPatterns.closedHat.part04,
+                part05: allPatterns.closedHat.part05,
+                part06: allPatterns.closedHat.part06,
+                part07: allPatterns.closedHat.part07,
+                part08: allPatterns.closedHat.part08,
+                part09: allPatterns.closedHat.part09,
+                part10: allPatterns.closedHat.part10,
+                part11: allPatterns.closedHat.part11,
+                part12: allPatterns.closedHat.part12,
+                part13: allPatterns.closedHat.part13,
+                part14: allPatterns.closedHat.part14,
+                part15: allPatterns.closedHat.part15,
+                part16: allPatterns.closedHat.part16
+            });
         } else if (sample === "openHat") {
             setKick({...kick, spy: false});
             setSnare({...snare, spy: false});
@@ -374,6 +629,24 @@ function MainContainer() {
             setPercussion_1({...percussion_1, spy: false});
             setPercussion_2({...percussion_2, spy: false});
             setTom({...tom, spy: false});
+            setSequenceButton({
+                part01: allPatterns.openHat.part01,
+                part02: allPatterns.openHat.part02,
+                part03: allPatterns.openHat.part03,
+                part04: allPatterns.openHat.part04,
+                part05: allPatterns.openHat.part05,
+                part06: allPatterns.openHat.part06,
+                part07: allPatterns.openHat.part07,
+                part08: allPatterns.openHat.part08,
+                part09: allPatterns.openHat.part09,
+                part10: allPatterns.openHat.part10,
+                part11: allPatterns.openHat.part11,
+                part12: allPatterns.openHat.part12,
+                part13: allPatterns.openHat.part13,
+                part14: allPatterns.openHat.part14,
+                part15: allPatterns.openHat.part15,
+                part16: allPatterns.openHat.part16
+            });
         } else if (sample === "crash") {
             setKick({...kick, spy: false});
             setSnare({...snare, spy: false});
@@ -385,6 +658,24 @@ function MainContainer() {
             setPercussion_1({...percussion_1, spy: false});
             setPercussion_2({...percussion_2, spy: false});
             setTom({...tom, spy: false});
+            setSequenceButton({
+                part01: allPatterns.crash.part01,
+                part02: allPatterns.crash.part02,
+                part03: allPatterns.crash.part03,
+                part04: allPatterns.crash.part04,
+                part05: allPatterns.crash.part05,
+                part06: allPatterns.crash.part06,
+                part07: allPatterns.crash.part07,
+                part08: allPatterns.crash.part08,
+                part09: allPatterns.crash.part09,
+                part10: allPatterns.crash.part10,
+                part11: allPatterns.crash.part11,
+                part12: allPatterns.crash.part12,
+                part13: allPatterns.crash.part13,
+                part14: allPatterns.crash.part14,
+                part15: allPatterns.crash.part15,
+                part16: allPatterns.crash.part16
+            });
         } else if (sample === "ride") {
             setKick({...kick, spy: false});
             setSnare({...snare, spy: false});
@@ -396,6 +687,24 @@ function MainContainer() {
             setPercussion_1({...percussion_1, spy: false});
             setPercussion_2({...percussion_2, spy: false});
             setTom({...tom, spy: false});
+            setSequenceButton({
+                part01: allPatterns.ride.part01,
+                part02: allPatterns.ride.part02,
+                part03: allPatterns.ride.part03,
+                part04: allPatterns.ride.part04,
+                part05: allPatterns.ride.part05,
+                part06: allPatterns.ride.part06,
+                part07: allPatterns.ride.part07,
+                part08: allPatterns.ride.part08,
+                part09: allPatterns.ride.part09,
+                part10: allPatterns.ride.part10,
+                part11: allPatterns.ride.part11,
+                part12: allPatterns.ride.part12,
+                part13: allPatterns.ride.part13,
+                part14: allPatterns.ride.part14,
+                part15: allPatterns.ride.part15,
+                part16: allPatterns.ride.part16
+            });
         } else if (sample === "percussion_1") {
             setKick({...kick, spy: false});
             setSnare({...snare, spy: false});
@@ -407,6 +716,24 @@ function MainContainer() {
             setPercussion_1({...percussion_1, spy: true});
             setPercussion_2({...percussion_2, spy: false});
             setTom({...tom, spy: false});
+            setSequenceButton({
+                part01: allPatterns.percussion_1.part01,
+                part02: allPatterns.percussion_1.part02,
+                part03: allPatterns.percussion_1.part03,
+                part04: allPatterns.percussion_1.part04,
+                part05: allPatterns.percussion_1.part05,
+                part06: allPatterns.percussion_1.part06,
+                part07: allPatterns.percussion_1.part07,
+                part08: allPatterns.percussion_1.part08,
+                part09: allPatterns.percussion_1.part09,
+                part10: allPatterns.percussion_1.part10,
+                part11: allPatterns.percussion_1.part11,
+                part12: allPatterns.percussion_1.part12,
+                part13: allPatterns.percussion_1.part13,
+                part14: allPatterns.percussion_1.part14,
+                part15: allPatterns.percussion_1.part15,
+                part16: allPatterns.percussion_1.part16
+            });
         } else if (sample === "percussion_2") {
             setKick({...kick, spy: false});
             setSnare({...snare, spy: false});
@@ -418,6 +745,24 @@ function MainContainer() {
             setPercussion_1({...percussion_1, spy: false});
             setPercussion_2({...percussion_2, spy: true});
             setTom({...tom, spy: false});
+            setSequenceButton({
+                part01: allPatterns.percussion_2.part01,
+                part02: allPatterns.percussion_2.part02,
+                part03: allPatterns.percussion_2.part03,
+                part04: allPatterns.percussion_2.part04,
+                part05: allPatterns.percussion_2.part05,
+                part06: allPatterns.percussion_2.part06,
+                part07: allPatterns.percussion_2.part07,
+                part08: allPatterns.percussion_2.part08,
+                part09: allPatterns.percussion_2.part09,
+                part10: allPatterns.percussion_2.part10,
+                part11: allPatterns.percussion_2.part11,
+                part12: allPatterns.percussion_2.part12,
+                part13: allPatterns.percussion_2.part13,
+                part14: allPatterns.percussion_2.part14,
+                part15: allPatterns.percussion_2.part15,
+                part16: allPatterns.percussion_2.part16
+            });
         } else {
             setKick({...kick, spy: false});
             setSnare({...snare, spy: false});
@@ -429,6 +774,24 @@ function MainContainer() {
             setPercussion_1({...percussion_1, spy: false});
             setPercussion_2({...percussion_2, spy: false});
             setTom({...tom, spy: true});
+            setSequenceButton({
+                part01: allPatterns.tom.part01,
+                part02: allPatterns.tom.part02,
+                part03: allPatterns.tom.part03,
+                part04: allPatterns.tom.part04,
+                part05: allPatterns.tom.part05,
+                part06: allPatterns.tom.part06,
+                part07: allPatterns.tom.part07,
+                part08: allPatterns.tom.part08,
+                part09: allPatterns.tom.part09,
+                part10: allPatterns.tom.part10,
+                part11: allPatterns.tom.part11,
+                part12: allPatterns.tom.part12,
+                part13: allPatterns.tom.part13,
+                part14: allPatterns.tom.part14,
+                part15: allPatterns.tom.part15,
+                part16: allPatterns.tom.part16
+            });
         };
     };
 
@@ -492,6 +855,197 @@ function MainContainer() {
             part15: seqStates[14],
             part16: seqStates[15]
         });
+        if (kick.spy) {
+            setAllPatterns({...allPatterns, kick: {
+                part01: seqStates[0],
+                part02: seqStates[1],
+                part03: seqStates[2],
+                part04: seqStates[3],
+                part05: seqStates[4],
+                part06: seqStates[5],
+                part07: seqStates[6],
+                part08: seqStates[7],
+                part09: seqStates[8],
+                part10: seqStates[9],
+                part11: seqStates[10],
+                part12: seqStates[11],
+                part13: seqStates[12],
+                part14: seqStates[13],
+                part15: seqStates[14],
+                part16: seqStates[15]
+            }});
+        } else if (snare.spy) {
+            setAllPatterns({...allPatterns, snare: {
+                part01: seqStates[0],
+                part02: seqStates[1],
+                part03: seqStates[2],
+                part04: seqStates[3],
+                part05: seqStates[4],
+                part06: seqStates[5],
+                part07: seqStates[6],
+                part08: seqStates[7],
+                part09: seqStates[8],
+                part10: seqStates[9],
+                part11: seqStates[10],
+                part12: seqStates[11],
+                part13: seqStates[12],
+                part14: seqStates[13],
+                part15: seqStates[14],
+                part16: seqStates[15]
+            }});
+        } else if (clap.spy) {
+            setAllPatterns({...allPatterns, clap: {
+                part01: seqStates[0],
+                part02: seqStates[1],
+                part03: seqStates[2],
+                part04: seqStates[3],
+                part05: seqStates[4],
+                part06: seqStates[5],
+                part07: seqStates[6],
+                part08: seqStates[7],
+                part09: seqStates[8],
+                part10: seqStates[9],
+                part11: seqStates[10],
+                part12: seqStates[11],
+                part13: seqStates[12],
+                part14: seqStates[13],
+                part15: seqStates[14],
+                part16: seqStates[15]
+            }});
+        } else if (closedHat.spy) {
+            setAllPatterns({...allPatterns, closedHat: {
+                part01: seqStates[0],
+                part02: seqStates[1],
+                part03: seqStates[2],
+                part04: seqStates[3],
+                part05: seqStates[4],
+                part06: seqStates[5],
+                part07: seqStates[6],
+                part08: seqStates[7],
+                part09: seqStates[8],
+                part10: seqStates[9],
+                part11: seqStates[10],
+                part12: seqStates[11],
+                part13: seqStates[12],
+                part14: seqStates[13],
+                part15: seqStates[14],
+                part16: seqStates[15]
+            }});
+        } else if (openHat.spy) {
+            setAllPatterns({...allPatterns, openHat: {
+                part01: seqStates[0],
+                part02: seqStates[1],
+                part03: seqStates[2],
+                part04: seqStates[3],
+                part05: seqStates[4],
+                part06: seqStates[5],
+                part07: seqStates[6],
+                part08: seqStates[7],
+                part09: seqStates[8],
+                part10: seqStates[9],
+                part11: seqStates[10],
+                part12: seqStates[11],
+                part13: seqStates[12],
+                part14: seqStates[13],
+                part15: seqStates[14],
+                part16: seqStates[15]
+            }});
+        } else if (crash.spy) {
+            setAllPatterns({...allPatterns, crash: {
+                part01: seqStates[0],
+                part02: seqStates[1],
+                part03: seqStates[2],
+                part04: seqStates[3],
+                part05: seqStates[4],
+                part06: seqStates[5],
+                part07: seqStates[6],
+                part08: seqStates[7],
+                part09: seqStates[8],
+                part10: seqStates[9],
+                part11: seqStates[10],
+                part12: seqStates[11],
+                part13: seqStates[12],
+                part14: seqStates[13],
+                part15: seqStates[14],
+                part16: seqStates[15]
+            }});
+        } else if (ride.spy) {
+            setAllPatterns({...allPatterns, ride: {
+                part01: seqStates[0],
+                part02: seqStates[1],
+                part03: seqStates[2],
+                part04: seqStates[3],
+                part05: seqStates[4],
+                part06: seqStates[5],
+                part07: seqStates[6],
+                part08: seqStates[7],
+                part09: seqStates[8],
+                part10: seqStates[9],
+                part11: seqStates[10],
+                part12: seqStates[11],
+                part13: seqStates[12],
+                part14: seqStates[13],
+                part15: seqStates[14],
+                part16: seqStates[15]
+            }});
+        } else if (percussion_1.spy) {
+            setAllPatterns({...allPatterns, percussion_1: {
+                part01: seqStates[0],
+                part02: seqStates[1],
+                part03: seqStates[2],
+                part04: seqStates[3],
+                part05: seqStates[4],
+                part06: seqStates[5],
+                part07: seqStates[6],
+                part08: seqStates[7],
+                part09: seqStates[8],
+                part10: seqStates[9],
+                part11: seqStates[10],
+                part12: seqStates[11],
+                part13: seqStates[12],
+                part14: seqStates[13],
+                part15: seqStates[14],
+                part16: seqStates[15]
+            }});
+        } else if (percussion_2.spy) {
+            setAllPatterns({...allPatterns, percussion_2: {
+                part01: seqStates[0],
+                part02: seqStates[1],
+                part03: seqStates[2],
+                part04: seqStates[3],
+                part05: seqStates[4],
+                part06: seqStates[5],
+                part07: seqStates[6],
+                part08: seqStates[7],
+                part09: seqStates[8],
+                part10: seqStates[9],
+                part11: seqStates[10],
+                part12: seqStates[11],
+                part13: seqStates[12],
+                part14: seqStates[13],
+                part15: seqStates[14],
+                part16: seqStates[15]
+            }});
+        } else if (tom.spy) {
+            setAllPatterns({...allPatterns, tom: {
+                part01: seqStates[0],
+                part02: seqStates[1],
+                part03: seqStates[2],
+                part04: seqStates[3],
+                part05: seqStates[4],
+                part06: seqStates[5],
+                part07: seqStates[6],
+                part08: seqStates[7],
+                part09: seqStates[8],
+                part10: seqStates[9],
+                part11: seqStates[10],
+                part12: seqStates[11],
+                part13: seqStates[12],
+                part14: seqStates[13],
+                part15: seqStates[14],
+                part16: seqStates[15]
+            }});
+        };
     };
 
     //--------------------RETURN--------------------
