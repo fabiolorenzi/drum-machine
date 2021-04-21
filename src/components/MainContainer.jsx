@@ -343,6 +343,105 @@ function MainContainer() {
         }
     };
 
+    function samplePlayer(index) {
+        let kickSeq = [allPatterns.kick.part01, allPatterns.kick.part02, allPatterns.kick.part03, allPatterns.kick.part04,
+            allPatterns.kick.part05, allPatterns.kick.part06, allPatterns.kick.part07, allPatterns.kick.part08,
+            allPatterns.kick.part09, allPatterns.kick.part10, allPatterns.kick.part11, allPatterns.kick.part12,
+            allPatterns.kick.part13, allPatterns.kick.part14, allPatterns.kick.part15, allPatterns.kick.part16];
+
+        let snareSeq = [allPatterns.snare.part01, allPatterns.snare.part02, allPatterns.snare.part03, allPatterns.snare.part04,
+            allPatterns.snare.part05, allPatterns.snare.part06, allPatterns.snare.part07, allPatterns.snare.part08,
+            allPatterns.snare.part09, allPatterns.snare.part10, allPatterns.snare.part11, allPatterns.snare.part12,
+            allPatterns.snare.part13, allPatterns.snare.part14, allPatterns.snare.part15, allPatterns.snare.part16];
+
+        let clapSeq = [allPatterns.clap.part01, allPatterns.clap.part02, allPatterns.clap.part03, allPatterns.clap.part04,
+            allPatterns.clap.part05, allPatterns.clap.part06, allPatterns.clap.part07, allPatterns.clap.part08,
+            allPatterns.clap.part09, allPatterns.clap.part10, allPatterns.clap.part11, allPatterns.clap.part12,
+            allPatterns.clap.part13, allPatterns.clap.part14, allPatterns.clap.part15, allPatterns.clap.part16];
+
+        let closedHatSeq = [allPatterns.closedHat.part01, allPatterns.closedHat.part02, allPatterns.closedHat.part03,
+            allPatterns.closedHat.part04, allPatterns.closedHat.part05, allPatterns.closedHat.part06, allPatterns.closedHat.part07,
+            allPatterns.closedHat.part08, allPatterns.closedHat.part09, allPatterns.closedHat.part10, allPatterns.closedHat.part11,
+            allPatterns.closedHat.part12, allPatterns.closedHat.part13, allPatterns.closedHat.part14, allPatterns.closedHat.part15,
+            allPatterns.closedHat.part16];
+
+        let openHatSeq = [allPatterns.openHat.part01, allPatterns.openHat.part02, allPatterns.openHat.part03,
+            allPatterns.openHat.part04, allPatterns.openHat.part05, allPatterns.openHat.part06, allPatterns.openHat.part07,
+            allPatterns.openHat.part08, allPatterns.openHat.part09, allPatterns.openHat.part10, allPatterns.openHat.part11,
+            allPatterns.openHat.part12, allPatterns.openHat.part13, allPatterns.openHat.part14, allPatterns.openHat.part15,
+            allPatterns.openHat.part16];
+
+        let crashSeq = [allPatterns.crash.part01, allPatterns.crash.part02, allPatterns.crash.part03, allPatterns.crash.part04,
+            allPatterns.crash.part05, allPatterns.crash.part06, allPatterns.crash.part07, allPatterns.crash.part08,
+            allPatterns.crash.part09, allPatterns.crash.part10, allPatterns.crash.part11, allPatterns.crash.part12,
+            allPatterns.crash.part13, allPatterns.crash.part14, allPatterns.crash.part15, allPatterns.crash.part16];
+
+        let rideSeq = [allPatterns.ride.part01, allPatterns.ride.part02, allPatterns.ride.part03, allPatterns.ride.part04,
+            allPatterns.ride.part05, allPatterns.ride.part06, allPatterns.ride.part07, allPatterns.ride.part08,
+            allPatterns.ride.part09, allPatterns.ride.part10, allPatterns.ride.part11, allPatterns.ride.part12,
+            allPatterns.ride.part13, allPatterns.ride.part14, allPatterns.ride.part15, allPatterns.ride.part16];
+            
+        let percussion_1Seq = [allPatterns.percussion_1.part01, allPatterns.percussion_1.part02, allPatterns.percussion_1.part03,
+            allPatterns.percussion_1.part04, allPatterns.percussion_1.part05, allPatterns.percussion_1.part06,
+            allPatterns.percussion_1.part07, allPatterns.percussion_1.part08, allPatterns.percussion_1.part09,
+            allPatterns.percussion_1.part10, allPatterns.percussion_1.part11,
+            allPatterns.percussion_1.part12, allPatterns.percussion_1.part13, allPatterns.percussion_1.part14,
+            allPatterns.percussion_1.part15, allPatterns.percussion_1.part16];
+
+        let percussion_2Seq = [allPatterns.percussion_2.part01, allPatterns.percussion_2.part02, allPatterns.percussion_2.part03,
+            allPatterns.percussion_2.part04, allPatterns.percussion_2.part05, allPatterns.percussion_2.part06,
+            allPatterns.percussion_2.part07, allPatterns.percussion_2.part08, allPatterns.percussion_2.part09,
+            allPatterns.percussion_2.part10, allPatterns.percussion_2.part11,
+            allPatterns.percussion_2.part12, allPatterns.percussion_2.part13, allPatterns.percussion_2.part14,
+            allPatterns.percussion_2.part15, allPatterns.percussion_2.part16];
+
+        let tomSeq = [allPatterns.tom.part01, allPatterns.tom.part02, allPatterns.tom.part03, allPatterns.tom.part04,
+            allPatterns.tom.part05, allPatterns.tom.part06, allPatterns.tom.part07, allPatterns.tom.part08,
+            allPatterns.tom.part09, allPatterns.tom.part10, allPatterns.tom.part11, allPatterns.tom.part12,
+            allPatterns.tom.part13, allPatterns.tom.part14, allPatterns.tom.part15, allPatterns.tom.part16];
+
+        if (kickSeq[index]) {
+            kickSample.volume = kick.volume;
+            kickSample.play();
+        };
+        if (snareSeq[index]) {
+            snareSample.volume = snare.volume;
+            snareSample.play();
+        };
+        if (clapSeq[index]) {
+            clapSample.volume = clap.volume;
+            clapSample.play();
+        };
+        if (closedHatSeq[index]) {
+            closedHatSample.volume = closedHat.volume;
+            closedHatSample.play();
+        };
+        if (openHatSeq[index]) {
+            openHatSample.volume = openHat.volume;
+            openHatSample.play();
+        };
+        if (crashSeq[index]) {
+            crashSample.volume = crash.volume;
+            crashSample.play();
+        };
+        if (rideSeq[index]) {
+            rideSample.volume = ride.volume;
+            rideSample.play();
+        };
+        if (percussion_1Seq[index]) {
+            percussion1Sample.volume = percussion_1.volume;
+            percussion1Sample.play();
+        };
+        if (percussion_2Seq[index]) {
+            percussion2Sample.volume = percussion_2.volume;
+            percussion2Sample.play();
+        };
+        if (tomSeq[index]) {
+            tomSample.volume = tom.volume;
+            tomSample.play();
+        };
+    };
+
     const starter = e => {
         e.preventDefault();
         if (!settings.playing) {
@@ -353,14 +452,17 @@ function MainContainer() {
                     if (counter === 0) {
                         rhythmState[0] = true;
                         rhythmState[mainPattern.length-1] = false;
+                        samplePlayer(counter);
                         counter++;
                     } else if (counter > 0 && counter < mainPattern.length-1) {
                         rhythmState[counter] = true;
                         rhythmState[counter-1] = false;
+                        samplePlayer(counter);
                         counter++;
                     } else {
                         rhythmState[counter] = true;
                         rhythmState[counter-1] = false;
+                        samplePlayer(counter);
                         counter = 0;
                     };
                     setRhythmPattern({
