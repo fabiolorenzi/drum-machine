@@ -7,7 +7,7 @@ function App() {
     return(
         <div className="fullApp">
             <Switch>
-                <Route path="/" exact component={MainContainer} />
+                <Route path="/drum-machine" exact component={MainContainer} />
             </Switch>
         </div>
     );
