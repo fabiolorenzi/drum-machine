@@ -3,16 +3,16 @@ import { AiFillCaretRight } from "react-icons/ai";
 import { BsSliders } from "react-icons/bs";
 import { AiFillSound } from "react-icons/ai";
 
-import sample1 from "../audio/kick.wav";
-import sample2 from "../audio/snare.wav";
-import sample3 from "../audio/clap.wav";
-import sample4 from "../audio/closedHat.wav";
-import sample5 from "../audio/openHat.wav";
-import sample6 from "../audio/crash.wav";
-import sample7 from "../audio/ride.wav";
-import sample8 from "../audio/percussion_1.wav";
-import sample9 from "../audio/percussion_2.wav";
-import sample0 from "../audio/tom.wav";
+import sample1 from "../audio/kick.mp3";
+import sample2 from "../audio/snare.mp3";
+import sample3 from "../audio/clap.mp3";
+import sample4 from "../audio/closedHat.mp3";
+import sample5 from "../audio/openHat.mp3";
+import sample6 from "../audio/crash.mp3";
+import sample7 from "../audio/ride.mp3";
+import sample8 from "../audio/percussion_1.mp3";
+import sample9 from "../audio/percussion_2.mp3";
+import sample0 from "../audio/tom.mp3";
 
 function MainContainer() {
 
